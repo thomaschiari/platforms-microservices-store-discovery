@@ -19,6 +19,10 @@
 	<!-- Permite o registro em um serviço de discovery -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 
@@ -27,6 +31,11 @@
 			<artifactId>lombok</artifactId>
 			<version>[1.18.30,)</version>
 			<scope>provided</scope>
+		</dependency>
+		<!-- Habilitar para fazer uso de outros microsserviços -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 	</dependencies>
 
@@ -38,11 +47,6 @@
 				<version>${spring-cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
-			</dependency>
-			<!-- Habilitar para fazer uso de outros microsserviços -->
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-starter-openfeign</artifactId>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
